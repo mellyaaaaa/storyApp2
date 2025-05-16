@@ -1,0 +1,112 @@
+@media screen and (max-width: 480px) {
+    main {
+      padding: 16px 12px;
+    }
+    
+    .content {
+      padding: 16px;
+    }
+    
+    .app-bar {
+      flex-direction: column;
+      padding: 12px;
+    }
+  
+    .app-bar__brand {
+      margin-bottom: 12px;
+    }
+  
+    .app-bar__navigation ul {
+      gap: 8px;
+    }
+    
+    .story-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .story-item__thumbnail {
+      height: 180px;
+    }
+    
+    .detail-container {
+      padding: 0;
+    }
+    
+    .detail-image img {
+      max-height: 300px;
+    }
+    
+    .login-container, 
+    .register-container {
+      padding: 24px 16px;
+    }
+    
+    .form-group button {
+      width: 100%;
+    }
+    
+    .location-info {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .map-container {
+      height: 250px;
+    }
+  }
+  
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    main {
+      padding: 24px 16px;
+    }
+    
+    .story-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .detail-container {
+      padding: 0 16px;
+    }
+    
+    .detail-image img {
+      max-height: 400px;
+    }
+    
+    .login-container, 
+    .register-container {
+      padding: 32px 24px;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .story-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .detail-container {
+      max-width: 720px;
+    }
+  }
+  
+  @media screen and (min-width: 1025px) {
+    main {
+      max-width: 1200px;
+      padding: 32px 24px;
+    }
+    
+    .story-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .detail-container {
+      max-width: 800px;
+    }
+    
+    .map-container {
+      height: 400px;
+    }
+    
+    .location-map {
+      height: 350px;
+    }
+  }

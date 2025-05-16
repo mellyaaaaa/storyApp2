@@ -1,0 +1,23 @@
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+    padding: 10px 20px;
+    z-index: 1001;
+    text-decoration: none;
+    transition: top 0.3s;
+    border-radius: 0 0 8px 0;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skip-link:focus {
+    top: 0;
+    outline: none;
+  }
+  
+  .skip-link:hover {
+    background-color: var(--primary-dark);
+  }
