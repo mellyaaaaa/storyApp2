@@ -1,0 +1,28 @@
+{
+  "name": "story-app",
+  "version": "1.0.1",
+  "description": "Aplikasi untuk berbagi cerita dan momen berharga",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "story",
+    "spa",
+    "pwa"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "regenerator-runtime": "^0.13.11",
+    "idb": "^7.1.1",
+    "workbox-window": "^7.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-pwa": "^0.16.3"
+  }
+}

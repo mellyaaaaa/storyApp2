@@ -1,0 +1,30 @@
+.favorite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s ease;
+}
+
+.favorite-button:hover {
+  transform: scale(1.1);
+}
+
+.favorite-button i {
+  font-size: 24px;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.favorite-button.favorited i {
+  color: #ff4d4d;
+}
+
+.favorite-button:focus {
+  outline: none;
+}
+
+.favorite-button:focus-visible {
+  outline: 2px solid #666;
+  border-radius: 4px;
+} 

@@ -1,0 +1,246 @@
+.story-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-top: 4px solid var(--primary-color);
+  }
+  
+  .story-form .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .story-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 16px;
+  }
+  
+  .story-form textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    resize: vertical;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  .story-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+  }
+  
+  .camera-container {
+    margin-bottom: 20px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+  }
+  
+  #cameraView, #photoPreview {
+    width: 100%;
+    max-height: 400px;
+    border-radius: var(--border-radius);
+    margin-bottom: 16px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .camera-controls {
+    display: flex;
+    gap: 16px;
+  }
+  
+  #cameraButton, #captureButton {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    display: flex;
+    align-items: center;
+  }
+  
+  #cameraButton::before {
+    content: "📷";
+    margin-right: 8px;
+  }
+  
+  #captureButton::before {
+    content: "📸";
+    margin-right: 8px;
+  }
+  
+  #cameraButton:hover, #captureButton:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  #cameraButton:focus, #captureButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3);
+  }
+  
+  .location-container {
+    margin-bottom: 20px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+  }
+  
+  .location-map {
+    height: 350px;
+    border-radius: var(--border-radius);
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .location-controls {
+    margin-bottom: 16px;
+  }
+  
+  #locationButton {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    display: flex;
+    align-items: center;
+  }
+  
+  #locationButton::before {
+    content: "📍";
+    margin-right: 8px;
+  }
+  
+  #locationButton:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  #locationButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3);
+  }
+  
+  .location-info {
+    display: flex;
+    gap: 16px;
+    background-color: white;
+    padding: 16px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .location-info .form-group {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  
+  .location-info input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .helper-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .helper-text::before {
+    content: "💡";
+    margin-right: 8px;
+  }
+  
+  .submit-button {
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 500;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .submit-button::before {
+    content: "✓";
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  
+  .submit-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3);
+  }
+  
+  .submit-button:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .story-form {
+      padding: 16px;
+    }
+    
+    .location-info {
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .camera-controls {
+      flex-direction: column;
+    }
+    
+    #cameraButton, #captureButton, #locationButton {
+      width: 100%;
+    }
+  }

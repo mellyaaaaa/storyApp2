@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplikasi untuk berbagi cerita dan momen berharga">
+  <meta name="theme-color" content="#4285f4">
+  
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/icons/icon-152x152.png">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="StoryApp">
+  
+  <title>StoryApp - Berbagi Cerita</title>
+  <!-- CSS dan JavaScript lainnya -->
+</head>
+<body>
+  <!-- Konten aplikasi -->
+  <div id="app-shell">
+    <!-- Header, navigasi, dan footer yang statis -->
+  </div>
+  <div id="content">
+    <!-- Konten dinamis akan dimuat di sini -->
+  </div>
+
+  <div id="offline-notification" class="hidden">
+    <p>Anda sedang offline. Beberapa fitur mungkin tidak tersedia.</p>
+  </div>
+
+  <script>
+    // Registrasi Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('Service Worker berhasil didaftarkan:', registration);
+          })
+          .catch(error => {
+            console.error('Gagal mendaftarkan Service Worker:', error);
+          });
+      });
+
+      // Monitor status koneksi
+      window.addEventListener('online', () => {
+        document.getElementById('offline-notification').classList.add('hidden');
+      });
+
+      window.addEventListener('offline', () => {
+        document.getElementById('offline-notification').classList.remove('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
