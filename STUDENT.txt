@@ -1,0 +1,2 @@
+URL DEPLOYMENT = https://story-app2-dicoding.vercel.app/
+REPOSITORI = https://github.com/mellyaaaaa/storyApp2
